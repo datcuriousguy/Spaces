@@ -20,8 +20,8 @@ app.add_middleware(
 # MySQL Database connection configuration
 MYSQL_CONFIG = {
     'host': 'localhost',  # Update with your MySQL server address
-    'user': 'root',  # Update with your MySQL user
-    'password': 'dan9995008658',  # Update with your MySQL password
+    'user': 'your_mysql_username',  # Update with your MySQL user
+    'password': 'your_mysql_password',  # Update with your MySQL password
     'database': 'spaces_app'  # The database where the "spaces" table resides
 }
 
@@ -157,8 +157,8 @@ def see_bookings():
     # Connect to the MySQL database
     conn = mysql.connector.connect(
         host="localhost",
-        user="root",
-        password="dan9995008658",
+        user="your_mysql_username",
+        password="your_mysql_password",
         database="spaces_app"
     )
 
