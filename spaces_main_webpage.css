@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: monospace;
     background: url('https://images.pexels.com/photos/29097440/pexels-photo-29097440/free-photo-of-abstract-blue-gradient-3d-art-design.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center fixed;
+    /* background-color: rgba(32, 32, 32, 255); */
     background-size: cover;
     display: flex;
     justify-content: left;
@@ -87,4 +88,52 @@ input:focus, textare:focus {
 label {
     font-family: monospace;
     font-size: 20px;
+}
+
+.login-tab {
+    font-size: 30px;
+    color: rgba(255,255,255,0.9);
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 80%;
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    align-content: center;
+    height: 60vh;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+    margin-right: 40px;
+    padding: 50px;
+}
+
+.booking-tab {
+    font-size: 30px;
+    color: rgba(255,255,255,0.9);
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 80%;
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    align-content: center;
+    height: 60vh;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+    margin-right: 40px;
+    padding: 50px;
+}
+
+.finalize-tab {
+    font-size: 30px;
+    color: rgba(255,255,255,0.9);
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 80%;
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    align-content: center;
+    height: 60vh;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+    margin-right: 40px;
+    padding: 50px;
 }
