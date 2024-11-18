@@ -45,6 +45,7 @@ function see_bookings() {
             if (!externalContainer) {
                 externalContainer = document.createElement('div');
                 externalContainer.id = 'external-bookings-container';
+                //externalContainer.classList.add(externalContainerStyle);
                 document.body.appendChild(externalContainer); // Append outside the container
             }
 
@@ -88,16 +89,21 @@ document.getElementById('see_bookings_button_id').addEventListener('click', see_
 // CSS for frosted-glass tiles and styling (displayed outside the parent container)
 const styleElement = document.createElement('style');
 styleElement.innerHTML = `
-    #external-bookings-container {
+        #external-bookings-container {
         position: absolute;
-        left: 0; /* Positioned to the left outside of the 'container' */
+        left: 50%;
         top: 0;
-        width: 200px; /* Fixed width for the tile container */
+        transform: translateX(-50%);
+        width: 600px; /* Adjusted width for grid layout */
+        height: 100vh; /* Full viewport height */
         padding: 10px;
-        background: transparent;
-        display: flex;
-        flex-wrap: wrap;
+        background: rgba(255, 255, 255, 0.5); /* Slightly darker background for visibility */
+        overflow-y: auto; /* Scroll if content overflows */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Define columns for square-like layout */
+        grid-auto-rows: minmax(150px, auto); /* Set row height to make squares */
         gap: 10px;
+        align-content: start; /* Align grid items at the start of the container */
     }
 
     .booking-tile {
@@ -225,4 +231,38 @@ function updateClassroomButtons(availableClassrooms) {
     });
 }
 
+// NAVIGATION FUNCTIONS
 
+const loginButtonObject = document.getElementById('login_button_id');
+const bookingButtonObject = document.getElementById('booking_button_id');
+const finalizeButtonObject = document.getElementById('finalize_button_id');
+
+loginButtonObject.addEventListener('click', function(){
+
+    console.log('login clicked')
+
+    document.getElementById('booking_tab_id').style.visibility = 'hidden';
+    document.getElementById('finalize_tab_id').style.visibility = 'hidden';
+    document.getElementById('login_tab_id').style.visibility = 'visible';
+
+});
+
+bookingButtonObject.addEventListener('click', function(){
+
+    console.log('book clicked')
+
+    document.getElementById('booking_tab_id').style.visibility = 'visible';
+    document.getElementById('finalize_tab_id').style.visibility = 'hidden';
+    document.getElementById('login_tab_id').style.visibility = 'hidden';
+
+});
+
+finalizeButtonObject.addEventListener('click', function(){
+
+    console.log('finalize clicked')
+
+    document.getElementById('booking_tab_id').style.visibility = 'hidden';
+    document.getElementById('finalize_tab_id').style.visibility = 'visible';
+    document.getElementById('login_tab_id').style.visibility = 'hidden';
+
+});
