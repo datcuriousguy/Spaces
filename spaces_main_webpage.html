@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classroom Booking</title>
+    <title>spaces.io</title>
     <link rel="stylesheet" href="spaces_main_webpage.css">
 </head>
 <body>
     <div style="height:60vh;display:flex;width: 100%;">
         <div class="nav-button-container">
-            <button class="nav-button-style">Login</button>
-            <button class="nav-button-style">Book</button>
-            <button class="nav-button-style">Finalize</button>
+            <button class="nav-button-style" id="login_button_id">Login</button>
+            <button class="nav-button-style" id="booking_button_id">Book</button>
+            <button class="nav-button-style" id="finalize_button_id">Finalize</button>
         </div>
-        <div class="tab_box"></div>
+        <div class="login-tab" style="visibility: visible;" id="login_tab_id"><h1>Login</h1></div>
+        <div class="login-tab" style="visibility: hidden;" id="booking_tab_id"><h1>Booking</h1></div>
+        <div class="login-tab" style="visibility: hidden;" id="finalize_tab_id"><h1>Finalize</h1></div>
     </div>
     <script type="text/javascript" src="spaces_main_webpage.js"></script>
 </body>
