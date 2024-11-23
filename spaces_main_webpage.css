@@ -120,6 +120,7 @@ label {
     margin-left: 10px;
     margin-right: 40px;
     padding: 50px;
+    padding-top: 20px;
 }
 
 .finalize-tab {
@@ -160,7 +161,7 @@ label {
     display: none;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.3);
-    min-width: 160px;
+    width: 60px;
     border-radius: 10px;
     z-index: 1;
     backdrop-filter: blur(10px);
@@ -219,7 +220,7 @@ label {
     padding: 10px;
     border: none;
     border-radius: 10px;
-    width: 90%;
+    width: 60%;
     backdrop-filter: blur(10px);
 }
 /* Book Button Styling */
