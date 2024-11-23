@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="spaces_main_webpage.css">
 </head>
 <body>
-    <div style="height:60vh;display:flex;width: 100%;">
+    <div style="height:60vh;display:flex;width: 100%">
         <div class="nav-button-container">
             <button class="nav-button-style" id="login_button_id">Login</button>
             <button class="nav-button-style" id="booking_button_id">Book</button>
@@ -15,12 +15,21 @@
         </div>
         <div class="login-tab" style="visibility: visible;" id="login_tab_id"><h1>Login</h1></div>
         <div class="booking-tab" style="visibility: hidden;" id="booking_tab_id">
-            <h2 id="main-title">Book a Classroom</h2>
+            <div>
+                <!-- Purpose Input -->
+                <div class="purpose" id="purpose-input">
+                <label for="purpose" id="purpose-label">Purpose of Usage:</label>
+                <input type="text" id="purpose" placeholder="Enter your purpose">
+            
+        </div>
+            </div>
             <button class="buttons" id="see_bookings_button_id">See Bookings</button>
         <div id="bookings_container"></div>
         <!-- Time Slots Dropdown -->
+         
         <div class="dropdown" id="time-slot-dropdown">
             <button class="dropbtn" id="time-slot-btn">Select Time Slot</button>
+            
             <div class="dropdown-content" id="time-slot-options">
                 <a href="#" id="slot-0">00:00</a>
                 <a href="#" id="slot-1">01:00</a>
@@ -78,16 +87,14 @@
                 <button id="3i">3I</button>
             </div>
         </div>
-        <!-- Purpose Input -->
-        <div class="purpose" id="purpose-input">
-            <label for="purpose" id="purpose-label">Purpose of Usage:</label>
-            <input type="text" id="purpose" placeholder="Enter your purpose">
-        </div>
-        <!-- Book Button -->
-        <div class="book" id="book-action">
-            <button class="book-btn" id="book-btn">Book</button>
-        </div>
+        <div>
+            <!-- Book Button -->
+            <div class="book" id="book-action">
+                <button class="book-btn" id="book-btn">Book</button>
+            </div>
+         </div>
     </div>
+    <!-- end of booking tab -->
         </div>
         <div class="finalize-tab" style="visibility: hidden;" id="finalize_tab_id"><h1>Finalize</h1></div>
     </div>
